@@ -1,22 +1,112 @@
+/* BODY & GRID */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 80px 1fr;
+    height: 100vh;
+    background: #f0f2f5;
 }
 
+/* SIDEBAR */
 .sidebar {
-    background: #333;
+    grid-area: sidebar;
+    background: #1f2937;
     color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+.sidebar h2 {
+    margin: 0 0 20px 0;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+    color: #60a5fa;
+}
+
+.logout a {
+    color: #f87171;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HEADER */
 header {
-    background: #555;
+    grid-area: header;
+    background: #3b82f6;
     color: white;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-main {
-    background: #eee;
-    padding: 20px;
+header input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
 }
+
+.user-img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* MAIN CONTENT */
+main {
+    grid-area: main;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* SECTION TITLES */
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+/* CARDS GRID */
+.section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* CARD STYLING */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* COLOR CODED SECTIONS */
+.projects .card { border-left: 5px solid #3b82f6; }
+.announcements .card { border-left: 5px solid #10b981; }
+.trending .card { border-left: 5px solid #f59e0b; }
 

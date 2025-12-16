@@ -3,11 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>My Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sidebar">Sidebar</div>
-    <header>Header</header>
-    <main>Main Content</main>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>My Dashboard</h2>
+        <nav>
+            <a href="#">🏠 Home</a>
+            <a href="#">📁 Projects</a>
+            <a href="#">📢 Announcements</a>
+            <a href="#">⭐ Trending</a>
+            <a href="#">⚙ Settings</a>
+        </nav>
+        <div class="logout">
+            <a href="#">🚪 Logout</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <input type="text" placeholder="Search...">
+        <div class="user">
+            <img src="https://via.placeholder.com/40" alt="User" class="user-img">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Projects Section -->
+        <section class="section projects">
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>Status: Active</p>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Status: Completed</p>
+                </div>
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <p>Status: Active</p>
+                </div>
+                <div class="card">
+                    <h3>Project 4</h3>
+                    <p>Status: Pending</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcements Section -->
+        <section class="section announcements">
+            <h2>Announcements</h2>
+            <div class="cards">
+                <div class="card">
+                    <p>New update released!</p>
+                </div>
+                <div class="card">
+                    <p>Team meeting tomorrow</p>
+                </div>
+                <div class="card">
+                    <p>Server maintenance scheduled</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Section -->
+        <section class="section trending">
+            <h2>Trending</h2>
+            <div class="cards">
+                <div class="card">
+                    <p>Most active project: Project 1</p>
+                </div>
+                <div class="card">
+                    <p>Top contributor: John Doe</p>
+                </div>
+                <div class="card">
+                    <p>Highest viewed task: Task 42</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
